@@ -1,0 +1,160 @@
+html, body {
+    background: #f0f4f8;
+    color: #2d3748;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.card {
+    max-width: 550px;
+    width: 100%;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #1a202c;
+    text-align: center;
+}
+
+.row {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.row label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+    background: #f8fafc;
+    color: #2d3748;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.two-col {
+    display: flex;
+    gap: 12px;
+}
+
+.two-col > div {
+    flex: 1;
+}
+
+.checkbox-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn.primary {
+    background: #3182ce;
+    color: #ffffff;
+}
+
+.btn.primary:hover {
+    background: #2b6cb0;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: #718096;
+    border: 1px solid #cbd5e0;
+}
+
+.btn.ghost:hover {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.login-link {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: #718096;
+}
+
+.login-link a {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+main {width: 800px;}
+.columns {justify-content: center; }
+.column {width: 300px; }
+}
+
+@media (max-width: 750px) {
+main {
+width: 350px;
+padding: 10px 0;
+}
+.columns {
+flex-direction: column;
+gap: 15px;
+margin: 20px 0;
+}
+.column { width: 100%;}
+header nav {
+flex-direction: column;
+gap: 10px;
+}
+}
