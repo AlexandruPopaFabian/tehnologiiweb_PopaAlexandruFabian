@@ -8,22 +8,20 @@ loginForm.addEventListener("submit", function(e) {
   const email = emailInput.value.trim();
   const password = passwordInput.value;
   
-  // RegEx corectat pentru email-ul de e-uvt (ex: prenume.nume11@e-uvt.ro)
   const emailRegex = /^[a-z]+\.[a-z]+\d+@e-uvt\.ro$/;
   
-  // RegEx parola (minim 7 caractere, litera mica, litera mare, cifra, caracter special)
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{7,}$/;
 
   if (!emailRegex.test(email)) {
-    alert("Email invalid! Exemplu valid: nume.prenume12@e-uvt.ro");
+    alert("Email invalid! Exemplu valid: nume.prenume00@e-uvt.ro");
     return;
   }
 
   if (!passwordRegex.test(password)) {
-    alert("Parolă invalidă! Trebuie să aibă minim 7 caractere, o literă mare, o literă mică, o cifră și un caracter special.");
+    alert("Parolă invalida!");
     return;
   }
 
-  alert("Login reușit!");
+  alert("Login reusit!");
   window.location.href = "home.html"; 
 });
