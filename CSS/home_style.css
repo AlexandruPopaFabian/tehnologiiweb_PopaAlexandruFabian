@@ -122,6 +122,19 @@ footer a:hover {
     text-decoration: underline;
 }
 
+#cursor{
+    width: 20px;
+    height : 20px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left : 0;
+    pointer-events: none;
+    transform : translate(-50%, -50%);
+    z-index: 9999;
+    transition : transform 0.05s ease-out;
+}
+
 @media (max-width: 900px) {
 main {width: 800px;}
 .columns {justify-content: center; }
