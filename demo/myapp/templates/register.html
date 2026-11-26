@@ -4,11 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pagina de register</title>
-        <link rel="stylesheet" href="../CSS/style.css">
-        <link rel="stylesheet" href="../CSS/register_style.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/register_style.css' %}">
     </head>
     <body>
         <main class="page">
+        {% block content %}
         <section class="card">
         <h1></h1>
         <form class="register-form" action="#" method="post" enctype="multipart/form-data">
@@ -33,15 +35,16 @@
 
 
         <div class="actions">
-            <button type="submit" class="btn primary">Creeaza cont</button>
-            <button type="reset" class="btn ghost">Reseteaza</button>
+            <button type="submit" class="btn.primary">Creeaza cont</button>
+            <button type="reset" class="btn.ghost">Reseteaza</button>
         </div>
         <p class="login-link"> Ai deja cont?
 
-        <a href="login.html">Mergi la login</a></p>
+        <a href="{% url 'login' %}">Mergi la login</a></p>
 
         </form>
         </section>
+        {% endblock %}
         </main>
     </body>
 </html>

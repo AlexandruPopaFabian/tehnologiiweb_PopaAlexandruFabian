@@ -4,26 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Acasa</title>
-        <link rel="stylesheet" href="../CSS/home_style.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CSS/home_style.css' %}">
     </head>
     <body>
         <header>
         <div class="container">
             <h1>Comunitatea de Tehnologii Web 2026</h1>
             <nav>
-                <a href="home.html">Acasă</a>
-                <a href="../HTML/chatbot.html"> Chatbot</a>
-                <a href="../HTML/universities.html"> Facultati</a>
-                <a href="../HTML/galerie.html"> Galerie</a>
+                <a href="{% url 'home' %}">Acasă</a>
+                <a href="{% url 'chatbot' %}"> Chatbot</a>
+                <a href="{% url 'universities' %}"> Facultati</a>
+                <a href="{% url 'galerie' %}"> Galerie</a>
+                <a href="{% url 'pokemon' %}"> Pokemon API</a>
             </nav>
         </div>
         </header>
         <main class="container">
+        {% block content %}
         <section class="columns">
         <div class="column">
             <h2>Chatbot</h2>
             <p>Asta e un chatbot</p>
-            <a href="#" class="btn">Vezi mai mult</a>
+            <a href="{% url 'chatbot' %}" class="btn">Vezi mai mult</a>
         </div>
         <div class="column">
             <h2>Tehnologii Web</h2>
@@ -33,9 +36,10 @@
         <div class="column">
             <h2>Lista de facultati</h2>
             <p>Lista cu facultatile disponibile</p>
-            <a href="#" class="btn">Vezi mai mult</a>
+            <a href="{% url 'universities' %}" class="btn">Vezi mai mult</a>
         </div>
         </section>
+        {% endblock %}
         </main>
         <footer>
             <div class="container">

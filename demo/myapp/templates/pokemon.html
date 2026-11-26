@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/pokemon_style.css' %}">
+    <title>PokeAPI Explorer</title>
+</head>
+<body>
+    <header>
+        <h1>Comunitatea de Tehnologii Web 2026</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'galerie' %}">Galerie</a>
+            <a href="{% url 'pokemon' %}">Pokemon API</a>
+            <a href="{% url 'chatbot' %}">Chatbot</a>
+            <a href="{% url 'universities' %}">Universities</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Pokemon Search</h1>
+
+        <form id="searchForm">
+            <input id="queryInput" type="text" placeholder="Enter Pokemon name or ID (e.g. pikachu, charizard, 25)...">
+            <button id="searchBtn" type="submit">Search</button>
+        </form>
+
+        <p id="status" aria-live="polite"></p>
+        <div id="results"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Comunitatea de Tehnologii Web</p>
+            <p>
+                <a href="#">Universitatea de Vest din Timișoara</a> |
+                <a href="#">Facultatea de Informatică</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="{% static 'JS/pokemon.js' %}"></script>
+</body>
+</html>

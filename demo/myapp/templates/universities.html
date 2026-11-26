@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Universități din România</title>
-  <link rel="stylesheet" href="../CSS/universities_style.css">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/universities_style.css' %}">
 </head>
 <body>
-
+  {% block content %}
   <div>
     <h1>Universități din România</h1>
     
     <label for="q">Filtru (opțional):</label>
     <input id="q" placeholder="caută după nume..." />
-    
-    <!-- Pasul 5: Butonul de Export CSV -->
+
     <button id="exportBtn">Export CSV</button>
     
     <div id="status" class="status"></div>
@@ -31,7 +31,7 @@
     </table>
   </div>
 
-  <!-- Pasul 4: Integrare script JavaScript -->
-  <script src="../JS/universities_js.js"></script>
+  <script src="{% static 'JS/universities_js.js' %}"></script>
+  {% endblock %}
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galerie</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CSS/galerie.css' %}">
+    </head>
+    <body>
+        {% block content %}
+        <!-- Container principal pentru carusel -->
+        <div class="carousel-container">
+        <!-- Container pentru imaginea mare -->
+
+            <div class="carousel-view">
+            <!-- Imaginea curenta din carusel -->
+            <img id="carousel-image" src="{% static 'MEDIA/carusel.jpg' %}" alt="Carusel">
+            </div>
+        </div>
+        <script>
+            const images = [
+                "{% static 'MEDIA/carusel.jpg' %}",
+                "{% static 'MEDIA/carusel2.jpg' %}",
+                "{% static 'MEDIA/carusel3.jpg' %}"
+            ];
+        </script>
+        <script src="{% static 'JS/galerie.js' %}"></script> 
+        {% endblock %}
+    </body>
