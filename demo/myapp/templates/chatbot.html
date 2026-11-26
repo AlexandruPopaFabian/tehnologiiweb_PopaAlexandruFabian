@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chatbot</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CSS/chatbot_style.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    </head>
+    <body>
+        {%block content %}
+        <div class="chat-container" id="chat-container"></div>
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Scrie raspunsul aici">
+            <button type="submit">Trimite</button>
+        </form>
+        <script src="{% static 'JS/chatbot_js.js' %}"></script>
+        {% endblock %}
+    </body>
+</html>
